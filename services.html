@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Mbubana Mveledzo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="services.html">Services</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="services">
+      <h1>Services </h1>
+      <div class="service">
+        <h2>Website Development</h2>
+        <p>Designing and building responsive, user-friendly websites using modern web technologies.</p>
+      </div>
+
+      <div class="service">
+        <h2>Database Management</h2>
+        <p>Creating, organizing, and maintaining efficient and secure databases for applications.</p>
+      </div>
+
+      <div class="service">
+        <h2>Network Administration</h2>
+        <p>Setting up, managing, and troubleshooting networks to ensure smooth connectivity.</p>
+      </div>
+
+      <div class="service">
+        <h2>Software Development</h2>
+        <p>Developing custom software solutions tailored to solve specific business or personal needs.</p>
+      </div>
+
+      <div class="service">
+        <h2>Data Analysis</h2>
+        <p>Collecting, processing, and analyzing data to generate actionable insights.</p>
+      </div>
+
+      <div class="service">
+        <h2>Virtualization</h2>
+        <p>Creating virtual environments and systems to optimize resources and improve scalability.</p>
+      </div>
+    </section>
+
+
+    <section id="certificates">
+  <h1>Certified Skills</h1>
+
+  <!-- Certificate items -->
+  <div class="certificate-item" onclick="openCertificate('certificates/certificate1.png', 'Java Programming Certificate')">
+    Java Programming Certificate
+  </div>
+
+  <div class="certificate-item" onclick="openCertificate('Mveledzo-2-68863FE255D22-2025-07-27-17-04-02.pdf', 'Web Development Certificate')">
+    Web Development Certificate
+  </div>
+
+  <div class="certificate-item" onclick="openCertificate('certificates/certificate3.png', 'Data Analysis Certificate')">
+    Data Analysis Certificate
+  </div>
+
+  <!-- Modal -->
+  <div id="certificateModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCertificate()">&times;</span>
+      <h2 id="certTitle"></h2>
+      <img id="certImage" src="" alt="Certificate">
+      <br>
+      <a id="downloadLink" href="" download>Download Certificate</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Open the modal and show the selected certificate
+  function openCertificate(imageSrc, title) {
+    document.getElementById('certificateModal').style.display = 'block';
+    document.getElementById('certImage').src = imageSrc;
+    document.getElementById('certTitle').textContent = title;
+    document.getElementById('downloadLink').href = imageSrc;
+  }
+
+  // Close the modal
+  function closeCertificate() {
+    document.getElementById('certificateModal').style.display = 'none';
+  }
+
+  // Close modal if clicked outside the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById('certificateModal');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
+
+  </main>
+
+  <footer>
+    <p>© 2025 Mbubana Mveledzo</p>
+  </footer>
+</body>
+</html>
